@@ -10,7 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let ballArray = [#imageLiteral(resourceName: "ball1.png"),#imageLiteral(resourceName: "ball2.png"),#imageLiteral(resourceName: "ball3.png"),#imageLiteral(resourceName: "ball4.png"),#imageLiteral(resourceName: "ball5.png")]
+    
+    @IBOutlet weak var imageSelector: UIImageView!
+    
+    @IBOutlet weak var answer: UIImageView!
+    
+    
+    let ballArray = [#imageLiteral(resourceName: "ball1.png") , #imageLiteral(resourceName: "ball2.png") , #imageLiteral(resourceName: "ball3.png") , #imageLiteral(resourceName: "ball4.png") , #imageLiteral(resourceName: "ball5.png") ]
+    
+    let answer_2 = #imageLiteral(resourceName: "Image-2")
+    
+    
+    @IBAction func BTN(_ sender: UIButton) {
+        
+        imageSelector.image = ballArray[Int.random(in:0..<5)]
+        
+        answer.image = answer_2
+        
+    }
+    
 
 
 
